@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-blur {
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  transform: translateZ(0);
+  will-change: color, opacity;
+}
+
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #8b5cf6; /* adjust accent if you like */
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+.link-underline:hover::after,
+.link-underline[aria-current="page"]::after {
+  width: 100%;
+}
