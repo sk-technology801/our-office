@@ -1,3 +1,5 @@
+
+
 "use client";
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Code, Zap, Users, Mail, Briefcase, PenTool, Sun, Moon, Palette, Monitor } from 'lucide-react';
@@ -14,7 +16,7 @@ const Navbar = () => {
       name: 'Dark Cyber',
       navbar: 'bg-black/90 backdrop-blur-xl border-cyan-500/20',
       navbarScrolled: 'bg-black/95 backdrop-blur-xl border-cyan-500/30 shadow-2xl shadow-cyan-500/10',
-      background: 'bg-gradient-to-br from-black via-gray-900 to-black',
+      background: 'bg-black',
       text: 'text-gray-300',
       textHover: 'hover:text-cyan-300',
       accent: 'from-cyan-400 via-blue-400 to-purple-400',
@@ -26,7 +28,7 @@ const Navbar = () => {
       name: 'Pure Light',
       navbar: 'bg-white/90 backdrop-blur-xl border-gray-200/50',
       navbarScrolled: 'bg-white/95 backdrop-blur-xl border-gray-300/50 shadow-2xl shadow-gray-500/10',
-      background: 'bg-gradient-to-br from-gray-50 via-white to-gray-100',
+      background: 'bg-white',
       text: 'text-gray-700',
       textHover: 'hover:text-blue-600',
       accent: 'from-blue-600 via-purple-600 to-indigo-600',
@@ -38,7 +40,7 @@ const Navbar = () => {
       name: 'Neon Dreams',
       navbar: 'bg-gray-900/90 backdrop-blur-xl border-pink-500/30',
       navbarScrolled: 'bg-gray-900/95 backdrop-blur-xl border-pink-500/40 shadow-2xl shadow-pink-500/20',
-      background: 'bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900',
+      background: 'bg-gray-900',
       text: 'text-pink-300',
       textHover: 'hover:text-pink-100',
       accent: 'from-pink-400 via-purple-400 to-cyan-400',
@@ -50,7 +52,7 @@ const Navbar = () => {
       name: 'Ocean Depths',
       navbar: 'bg-blue-900/90 backdrop-blur-xl border-teal-400/30',
       navbarScrolled: 'bg-blue-900/95 backdrop-blur-xl border-teal-400/40 shadow-2xl shadow-teal-400/20',
-      background: 'bg-gradient-to-br from-blue-900 via-teal-800 to-cyan-900',
+      background: 'bg-blue-900',
       text: 'text-teal-200',
       textHover: 'hover:text-teal-100',
       accent: 'from-teal-400 via-cyan-400 to-blue-400',
@@ -62,7 +64,7 @@ const Navbar = () => {
       name: 'Sunset Glow',
       navbar: 'bg-orange-900/90 backdrop-blur-xl border-yellow-500/30',
       navbarScrolled: 'bg-orange-900/95 backdrop-blur-xl border-yellow-500/40 shadow-2xl shadow-orange-500/20',
-      background: 'bg-gradient-to-br from-orange-900 via-red-800 to-yellow-900',
+      background: 'bg-orange-900',
       text: 'text-orange-200',
       textHover: 'hover:text-yellow-200',
       accent: 'from-yellow-400 via-orange-400 to-red-400',
@@ -74,7 +76,7 @@ const Navbar = () => {
       name: 'Forest Magic',
       navbar: 'bg-green-900/90 backdrop-blur-xl border-emerald-500/30',
       navbarScrolled: 'bg-green-900/95 backdrop-blur-xl border-emerald-500/40 shadow-2xl shadow-emerald-500/20',
-      background: 'bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900',
+      background: 'bg-green-900',
       text: 'text-emerald-200',
       textHover: 'hover:text-emerald-100',
       accent: 'from-emerald-400 via-green-400 to-teal-400',
@@ -86,7 +88,7 @@ const Navbar = () => {
       name: 'Royal Purple',
       navbar: 'bg-purple-900/90 backdrop-blur-xl border-violet-500/30',
       navbarScrolled: 'bg-purple-900/95 backdrop-blur-xl border-violet-500/40 shadow-2xl shadow-purple-500/20',
-      background: 'bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900',
+      background: 'bg-purple-900',
       text: 'text-purple-200',
       textHover: 'hover:text-purple-100',
       accent: 'from-purple-400 via-violet-400 to-indigo-400',
@@ -143,26 +145,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className={`relative min-h-screen transition-all duration-1000 ${theme.background}`}>
-      {/* Animated Background Particles */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className={`absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br ${theme.accent} opacity-5 animate-pulse`}></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(25)].map((_, i) => (
-            <div
-              key={i}
-              className={`absolute w-1 h-1 ${theme.particles} rounded-full animate-ping`}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 4}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
+    <div className="relative">
       {/* Main Navbar */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled ? theme.navbarScrolled : theme.navbar
@@ -367,20 +350,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Demo Content */}
-      <div className="pt-32 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 py-20 text-center">
-          <h2 className={`text-6xl font-bold bg-gradient-to-r ${theme.accent} bg-clip-text text-transparent mb-8 animate-pulse`}>
-            Welcome to Builnest
-          </h2>
-          <p className={`text-xl ${theme.text} max-w-3xl mx-auto leading-relaxed mb-8`}>
-            Your premier software house for cutting-edge web development, mobile applications, and innovative digital solutions.
-          </p>
-          <div className={`inline-block px-4 py-2 rounded-full ${theme.navbar} backdrop-blur-xl border border-current/20 ${theme.text}`}>
-            Current Theme: <span className="font-semibold">{theme.name}</span>
-          </div>
-        </div>
-      </div>
+
 
       <style jsx>{`
         @keyframes fadeIn {
