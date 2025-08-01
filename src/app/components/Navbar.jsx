@@ -109,8 +109,8 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home', icon: null },
-    { name: 'About', href: '#about', icon: Users },
+    { name: 'Home', href: '/', icon: null },
+    { name: 'About', href: '/about', icon: Users },
     { 
       name: 'Services', 
       href: '#services', 
