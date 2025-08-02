@@ -113,9 +113,9 @@ const Navbar = () => {
     { name: 'About', href: '/about', icon: Users },
     { 
       name: 'Services', 
-      href: '#services', 
+      href: '/services', 
       icon: Code,
-      dropdown: ['Web Development', 'Mobile Apps', 'AI Solutions', 'Cloud Services']
+     
     },
     { name: 'Projects', href: '#projects', icon: Briefcase },
     { name: 'Team', href: '#team', icon: Users },
