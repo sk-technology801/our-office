@@ -117,7 +117,7 @@ const Navbar = () => {
       icon: Code,
      
     },
-    { name: 'Projects', href: '#projects', icon: Briefcase },
+    { name: 'Projects', href: '/projects', icon: Briefcase },
     { name: 'Team', href: '#team', icon: Users },
     { name: 'Contact', href: '#contact', icon: Mail },
     { name: 'Careers', href: '#careers', icon: Zap },
