@@ -1,3 +1,6 @@
+
+
+
 "use client";
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Code2, Smartphone, Globe, Database, Shield, Zap, Cloud, Cpu, Brain, Bot, Rocket } from 'lucide-react';
@@ -39,13 +42,14 @@ export default function BuildNestHomepage() {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <section className="min-h-screen flex items-center relative overflow-hidden">
+    <div className="bg-black text-white pt-24"> {/* Added pt-24 to account for navbar height */}
+      {/* Hero Section */}
+      <section className="min-h-[calc(100vh-6rem)] flex items-center relative overflow-hidden">
         {/* Pure Black Background */}
         <div className="absolute inset-0 bg-black"></div>
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             {/* Left Side - Tech Showcase */}
             <div className={`transform transition-all duration-1000 ease-out ${isLoaded ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
@@ -102,16 +106,6 @@ export default function BuildNestHomepage() {
               
               {/* Header */}
               <div className="mb-8">
-                <div className="flex items-center space-x-3 mb-6">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                    <span className="text-black font-bold text-xl">BN</span>
-                  </div>
-                  <div>
-                    <h2 className="text-xl font-bold text-white">BuildNest Technology</h2>
-                    <p className="text-gray-400 text-sm">Enterprise Software Solutions</p>
-                  </div>
-                </div>
-
                 <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                   Enterprise-Grade
                   <span className="block text-blue-400">Software Solutions</span>
