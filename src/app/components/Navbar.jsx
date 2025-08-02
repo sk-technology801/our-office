@@ -118,10 +118,10 @@ const Navbar = () => {
      
     },
     { name: 'Projects', href: '/projects', icon: Briefcase },
-    { name: 'Team', href: '#team', icon: Users },
-    { name: 'Contact', href: '#contact', icon: Mail },
-    { name: 'Careers', href: '#careers', icon: Zap },
-    { name: 'Blog', href: '#blog', icon: PenTool }
+    { name: 'Team', href: '/Team', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Mail },
+    { name: 'Careers', href: '/careers', icon: Zap },
+    { name: 'Blog', href: '/blog', icon: PenTool }
   ];
 
   const ThemeButton = ({ themeKey, themeName, icon: Icon }) => (
